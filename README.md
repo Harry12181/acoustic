@@ -1,16 +1,22 @@
 # AcousticShield Pro
 
-A native Android application built with Kotlin, Jetpack Compose Material 3, and Gradle Kotlin DSL. Package: \`com.acousticshield.pro\`. Android 8.0+ (API 26), targeting Android 14 (API 34).
+Native Kotlin + Jetpack Compose Android app targeting Android 14 (API 34), min API 26.
 
-## Build
+The repository includes the complete app source, tests, Android resources, build documentation, and a GitHub Actions workflow.
 
-\`\`\`sh
-./gradlew assembleDebug
+## Build on GitHub
+
+Open the **Actions** tab and run **Build AcousticShield Pro**. The workflow builds the debug APK and publishes it as the downloadable artifact **AcousticShieldPro-debug-apk**.
+
+## Build locally
+
+Install JDK 17 and Gradle 8.9, then run:
+
+```sh
+gradle assembleDebug
 adb install -r app/build/outputs/apk/debug/app-debug.apk
-\`\`\`
+```
 
-## Features
+The app includes a live microphone meter with manual fallback, alarm simulator, classroom acoustics planner, NIOSH exposure planner, calibration profiles, saved sessions, CSV export, daily dose tracking, and alarm presets.
 
-Live microphone meter with manual mode, layered alarm simulator, classroom treatment planner, NIOSH exposure planner, calibration profiles, saved measurement sessions, CSV export, daily dose tracking, and saved alarm presets.
-
-See the source archive and BUILD_REPORT.md for full details and limitations.
+This is an educational acoustic estimate, not a certified SPL meter, dBA dosimeter, alarm guarantee, or hearing-protection rating.
